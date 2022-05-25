@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -15,7 +16,7 @@ export class CharactersPage implements OnInit {
   constructor(private router: Router, private http: HttpClient) { }
 
   ngOnInit() {
-      this.characters = this.http.get('https://www.breakingbadapi.com/api/character');
+      this.characters = this.http.get('https://www.breakingbadapi.com/api/characters');
       
     }
   
